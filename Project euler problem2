@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 25 19:00:54 2019
+
+@author: pssan
+
+def fib(n):
+    if n==1:
+        return 1
+    elif n<0:
+        print("Incorrect Input")
+    elif n==0:
+        return 0
+    else:
+        return fib(n-1)+fib(n-2)
+"""  
+a=0
+b=1
+list=[]
+sum=0
+while(a+b<4000000):
+    a=a+b
+    b=a+b
+    list.append(a)
+    list.append(b)
+for x in list:
+    if x%2==0:
+        sum=sum+x
+print(sum)
