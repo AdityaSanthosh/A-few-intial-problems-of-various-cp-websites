@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb  4 07:15:42 2019
+
+@author: Aditya
+Implemented using Seive of eratosthenes
+
+"""
+
+n=int(input())
+def prime_eratosthenes(n):
+    composite_list = []
+    prime_list=[]
+    for i in range(2, n+1):
+        if i not in composite_list:
+            prime_list.append(i)
+            for j in range(i*i, n+1, i):
+                composite_list.append(j)
+    for x in prime_list:
+        if n%x==0:
+            print(x)
+prime_eratosthenes(n)
